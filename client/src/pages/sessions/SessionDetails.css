@@ -1,0 +1,399 @@
+/* Session Details Container */
+.session-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Loading and Error States */
+.session-details-loading,
+.session-details-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.error-content {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.error-content svg {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.error-content h2 {
+  margin: 16px 0 8px 0;
+  color: #1f2937;
+}
+
+.error-content p {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Header */
+.session-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+  transform: translateX(-2px);
+}
+
+.session-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.session-title h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 24px;
+}
+
+.session-id {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+/* Content */
+.session-details-content {
+  display: grid;
+  gap: 20px;
+}
+
+/* Cards */
+.status-card,
+.participant-card,
+.session-info-card,
+.description-card,
+.reason-card,
+.rating-card,
+.actions-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Status Card */
+.status-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.status-text {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.upcoming-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Participant Card */
+.participant-header {
+  margin-bottom: 16px;
+}
+
+.participant-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.participant-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.participant-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e5e7eb;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.participant-avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: none !important;
+  display: block !important;
+}
+
+.participant-details h4 {
+  margin: 0 0 4px 0;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.participant-details p {
+  margin: 0 0 8px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.participant-details .bio {
+  color: #374151;
+  font-style: italic;
+}
+
+/* Session Info Card */
+.session-info-card h3,
+.description-card h3,
+.reason-card h3,
+.rating-card h3,
+.actions-card h3 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 18px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+}
+
+.info-item svg {
+  color: #6366f1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.info-item div {
+  flex: 1;
+}
+
+.info-item label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-item span {
+  display: block;
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* Description Card */
+.description-card p,
+.reason-card p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Reason Card */
+.reason-card {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.reason-card h3 {
+  color: #dc2626;
+}
+
+/* Rating Card */
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.review-text {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #fbbf24;
+}
+
+.review-text p {
+  margin: 0;
+  color: #374151;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Actions Card */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-buttons .btn {
+  flex: 0 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .session-details-container {
+    padding: 15px;
+  }
+  
+  .session-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .session-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .session-title h1 {
+    font-size: 20px;
+  }
+  
+  .status-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .participant-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .participant-info {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-details-container {
+    padding: 10px;
+  }
+  
+  .status-card,
+  .participant-card,
+  .session-info-card,
+  .description-card,
+  .reason-card,
+  .rating-card,
+  .actions-card {
+    padding: 16px;
+  }
+  
+  .info-item {
+    padding: 12px;
+  }
+}

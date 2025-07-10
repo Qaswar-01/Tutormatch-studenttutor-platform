@@ -1,0 +1,20 @@
+{
+  "name": "tutor-match-platform",
+  "version": "1.0.0",
+  "description": "A comprehensive tutor matching platform built with MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install-deps": "npm install && cd client && npm install && cd ../server && npm install",
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy.ps1"
+  },
+  "keywords": ["tutor", "education", "mern", "react", "nodejs", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

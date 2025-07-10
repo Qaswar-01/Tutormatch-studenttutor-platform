@@ -1,0 +1,423 @@
+.session-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.session-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.session-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.user-avatar {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gray-200);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: none !important;
+  display: block !important;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.session-subject {
+  color: var(--primary-600);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.session-status {
+  flex-shrink: 0;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.status-warning {
+  background: var(--warning-100);
+  color: var(--warning-800);
+}
+
+.status-badge.status-success {
+  background: var(--success-100);
+  color: var(--success-800);
+}
+
+.status-badge.status-error {
+  background: var(--error-100);
+  color: var(--error-800);
+}
+
+.status-badge.status-info {
+  background: var(--info-100);
+  color: var(--info-800);
+}
+
+.status-badge.status-gray {
+  background: var(--gray-100);
+  color: var(--gray-800);
+}
+
+.status-icon {
+  font-size: 0.875rem;
+}
+
+.session-card-body {
+  padding: 1rem 1.5rem;
+}
+
+.session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.detail-icon {
+  font-size: 0.875rem;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.session-description {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-500);
+}
+
+.session-description p {
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rejection-reason {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--error-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--error-500);
+  font-size: 0.875rem;
+  color: var(--error-800);
+}
+
+.meeting-info {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--success-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--success-500);
+}
+
+.meeting-url {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meeting-link {
+  color: var(--success-700);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.meeting-link:hover {
+  color: var(--success-800);
+  text-decoration: underline;
+}
+
+.session-rating {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--warning-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--warning-500);
+}
+
+.rating-stars {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-review {
+  color: var(--warning-800);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+.session-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+}
+
+.session-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.session-id {
+  color: var(--gray-500);
+  font-size: 0.75rem;
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.upcoming-badge {
+  background: var(--info-100);
+  color: var(--info-800);
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.rate-reminder {
+  background: var(--warning-100);
+  color: var(--warning-800);
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Status-specific styling */
+.session-card.pending {
+  border-left: 4px solid var(--warning-500);
+}
+
+.session-card.approved {
+  border-left: 4px solid var(--success-500);
+}
+
+.session-card.rejected,
+.session-card.cancelled {
+  border-left: 4px solid var(--error-500);
+  opacity: 0.8;
+}
+
+.session-card.in-progress {
+  border-left: 4px solid var(--info-500);
+  background: linear-gradient(135deg, var(--info-50) 0%, white 100%);
+}
+
+.session-card.completed {
+  border-left: 4px solid var(--success-500);
+}
+
+.session-card.no-show {
+  border-left: 4px solid var(--error-500);
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .session-card-header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .session-user {
+    gap: 0.75rem;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar-image {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .user-name {
+    font-size: 1rem;
+  }
+
+  .session-card-body {
+    padding: 1rem;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-item {
+    min-width: auto;
+  }
+
+  .session-card-footer {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .session-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-card-header {
+    padding: 0.75rem;
+  }
+
+  .session-card-body {
+    padding: 0.75rem;
+  }
+
+  .session-card-footer {
+    padding: 0.75rem;
+  }
+
+  .user-name {
+    font-size: 0.875rem;
+  }
+
+  .session-subject {
+    font-size: 0.75rem;
+  }
+
+  .status-badge {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
+  }
+
+  .session-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .session-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Loading state */
+.session-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Accessibility */
+.meeting-link:focus,
+.session-actions .btn:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .session-card {
+    border-width: 2px;
+  }
+
+  .status-badge {
+    border: 1px solid currentColor;
+  }
+
+  .session-description,
+  .rejection-reason,
+  .meeting-info,
+  .session-rating {
+    border-left-width: 4px;
+  }
+}

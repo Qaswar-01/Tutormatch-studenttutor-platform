@@ -1,0 +1,369 @@
+/* Bookmarks Page */
+.bookmarks-page {
+  min-height: 100vh;
+  background: var(--gray-50);
+  padding: 2rem 0;
+}
+
+.bookmarks-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--gray-600);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.empty-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.empty-content svg {
+  color: var(--gray-400);
+  margin-bottom: 1.5rem;
+}
+
+.empty-content h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.empty-content p {
+  margin: 0 0 2rem 0;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.error-state svg {
+  color: var(--error-500);
+  margin-bottom: 1.5rem;
+}
+
+.error-state h2 {
+  margin: 0 0 1rem 0;
+  color: var(--gray-900);
+}
+
+.error-state p {
+  margin: 0 0 2rem 0;
+  color: var(--gray-600);
+}
+
+/* Controls */
+.bookmarks-controls {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 400px;
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-400);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.filter-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+/* Results */
+.bookmarks-results {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.results-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.results-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.no-results svg {
+  color: var(--gray-400);
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.no-results p {
+  margin: 0;
+  color: var(--gray-600);
+}
+
+/* Tutors Grid */
+.tutors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.tutors-grid .tutor-card {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 320px;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bookmarks-page {
+    padding: 1rem 0;
+  }
+
+  .bookmarks-page .container {
+    padding: 0 0.5rem;
+  }
+
+  .header-content {
+    padding: 1.5rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .bookmarks-controls {
+    padding: 1rem;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: auto;
+  }
+
+  .tutors-grid {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .tutors-grid .tutor-card {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 500px;
+  }
+
+  .bookmarks-results {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .empty-content {
+    padding: 1rem;
+  }
+
+  .empty-content svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .no-results svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-input-wrapper {
+    max-width: none;
+  }
+}
+
+/* Loading State */
+.bookmarks-page .loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Animation for bookmark removal */
+.tutor-card.removing {
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+/* Bookmark badge */
+.bookmark-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--error-500);
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  z-index: 10;
+}
+
+/* Hover effects */
+.tutors-grid .tutor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Focus states for accessibility */
+.search-input:focus,
+.filter-select:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .bookmarks-controls,
+  .bookmarks-results,
+  .header-content {
+    border-width: 2px;
+  }
+}

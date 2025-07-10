@@ -1,0 +1,330 @@
+.policy-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--gray-50) 100%);
+}
+
+.policy-hero {
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-icon {
+  color: var(--primary-200);
+  margin-bottom: 1.5rem;
+}
+
+.policy-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-100) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.policy-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.last-updated {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.policy-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-100);
+}
+
+.policy-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-100);
+  padding-bottom: 0.5rem;
+}
+
+.policy-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.policy-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.75rem;
+}
+
+.policy-section p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.policy-section ul {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.policy-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cookie Policy Specific */
+.cookie-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cookie-type {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary-500);
+}
+
+.cookie-icon {
+  color: var(--primary-600);
+  margin-bottom: 1rem;
+}
+
+.cookie-management {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.management-option {
+  background: var(--primary-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--primary-200);
+}
+
+/* Refund Policy Specific */
+.refund-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.refund-type {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--success-500);
+}
+
+.refund-icon {
+  color: var(--success-600);
+  margin-bottom: 1rem;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.step {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--primary-200);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-600);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+}
+
+.timeframes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.timeframe-item {
+  background: var(--warning-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--warning-500);
+  text-align: center;
+}
+
+.alternatives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.alternative {
+  background: var(--info-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--info-500);
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-method {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--gray-200);
+}
+
+.contact-icon {
+  color: var(--primary-600);
+  margin-bottom: 1rem;
+}
+
+/* Accessibility Specific */
+.accessibility-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-category {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary-500);
+}
+
+.category-icon {
+  color: var(--primary-600);
+  margin-bottom: 1rem;
+}
+
+.assistive-tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-item {
+  background: var(--success-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--success-200);
+}
+
+.tech-icon {
+  color: var(--success-600);
+  margin-bottom: 1rem;
+}
+
+.improvements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.improvement-item {
+  background: var(--info-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--info-500);
+}
+
+/* Contact Info */
+.contact-info {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-top: 1.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policy-hero {
+    padding: 2rem 0;
+  }
+  
+  .policy-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .policy-content {
+    padding: 2rem 1rem;
+  }
+  
+  .policy-section {
+    padding: 1.5rem;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cookie-types,
+  .refund-types,
+  .process-steps,
+  .timeframes,
+  .alternatives,
+  .contact-methods,
+  .accessibility-features,
+  .assistive-tech,
+  .improvements {
+    grid-template-columns: 1fr;
+  }
+}

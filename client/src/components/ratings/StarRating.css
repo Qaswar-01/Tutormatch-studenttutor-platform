@@ -1,0 +1,333 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.125rem;
+  position: relative;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-sm);
+}
+
+.star-button.readonly {
+  cursor: default;
+  pointer-events: none;
+}
+
+.star-button.interactive:hover {
+  transform: scale(1.1);
+}
+
+.star-button.interactive:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.star-icon {
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.star-button.empty .star-icon {
+  color: var(--gray-300);
+}
+
+.star-button.full .star-icon {
+  color: var(--warning-400);
+}
+
+.star-button.half .star-icon {
+  color: var(--gray-300);
+}
+
+.star-half-overlay {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 50%;
+  overflow: hidden;
+  color: var(--warning-400);
+  transition: opacity var(--transition-fast);
+}
+
+.star-half-overlay.visible {
+  opacity: 1;
+}
+
+.star-half-overlay:not(.visible) {
+  opacity: 0;
+}
+
+/* Size variants */
+.star-rating.small .star-icon {
+  font-size: 1rem;
+}
+
+.star-rating.medium .star-icon {
+  font-size: 1.25rem;
+}
+
+.star-rating.large .star-icon {
+  font-size: 1.5rem;
+}
+
+.star-rating.extra-large .star-icon {
+  font-size: 2rem;
+}
+
+/* Interactive states */
+.star-rating.interactive .star-button:hover .star-icon,
+.star-rating.interactive .star-button:focus .star-icon {
+  color: var(--warning-500);
+}
+
+.star-rating.interactive .star-button.empty:hover .star-icon,
+.star-rating.interactive .star-button.empty:focus .star-icon {
+  color: var(--warning-400);
+}
+
+/* Rating value display */
+.rating-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-left: 0.25rem;
+}
+
+.star-rating.small .rating-value {
+  font-size: 0.75rem;
+}
+
+.star-rating.large .rating-value {
+  font-size: 1rem;
+}
+
+.star-rating.extra-large .rating-value {
+  font-size: 1.125rem;
+}
+
+/* Rating preview (on hover) */
+.rating-preview {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gray-900);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 0.25rem;
+  opacity: 0;
+  animation: tooltipFadeIn 0.2s ease-out forwards;
+}
+
+.rating-preview::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--gray-900);
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Disabled state */
+.star-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Half star specific styling */
+.star-button.half-star {
+  position: relative;
+}
+
+.star-button.half-star .star-half-overlay {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Hover effects for interactive ratings */
+.star-rating.interactive .star-button {
+  position: relative;
+}
+
+.star-rating.interactive .star-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--warning-100);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: -1;
+}
+
+.star-rating.interactive .star-button:hover::before {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stars-container {
+    gap: 0.0625rem;
+  }
+
+  .star-rating.medium .star-icon {
+    font-size: 1.125rem;
+  }
+
+  .star-rating.large .star-icon {
+    font-size: 1.375rem;
+  }
+
+  .star-rating.extra-large .star-icon {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .star-rating.medium .star-icon {
+    font-size: 1rem;
+  }
+
+  .star-rating.large .star-icon {
+    font-size: 1.25rem;
+  }
+
+  .star-rating.extra-large .star-icon {
+    font-size: 1.5rem;
+  }
+
+  .rating-value {
+    font-size: 0.75rem;
+  }
+
+  .rating-preview {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .star-button.empty .star-icon {
+    color: var(--gray-600);
+  }
+
+  .star-button.full .star-icon {
+    color: var(--warning-600);
+  }
+
+  .star-half-overlay {
+    color: var(--warning-600);
+  }
+
+  .star-rating.interactive .star-button:hover .star-icon,
+  .star-rating.interactive .star-button:focus .star-icon {
+    color: var(--warning-700);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .star-button,
+  .star-icon,
+  .star-half-overlay,
+  .rating-preview {
+    transition: none;
+    animation: none;
+  }
+
+  .star-button.interactive:hover {
+    transform: none;
+  }
+
+  .star-rating.interactive .star-button::before {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .star-rating.interactive .star-button::before {
+    display: none;
+  }
+
+  .rating-preview {
+    display: none;
+  }
+
+  .star-button.full .star-icon {
+    color: #000;
+  }
+
+  .star-button.empty .star-icon {
+    color: #ccc;
+  }
+}
+
+/* Focus visible for better accessibility */
+.star-button:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Animation for rating changes */
+.star-icon {
+  animation: starPulse 0.3s ease-out;
+}
+
+@keyframes starPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Gradient stars for premium feel */
+.star-button.full .star-icon {
+  background: linear-gradient(45deg, var(--warning-400), var(--warning-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fallback for browsers that don't support background-clip */
+@supports not (-webkit-background-clip: text) {
+  .star-button.full .star-icon {
+    color: var(--warning-400);
+  }
+}

@@ -1,0 +1,366 @@
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.session-actions .btn {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Modal Styles */
+.reject-modal,
+.rating-modal,
+.reschedule-modal {
+  padding: 1rem 0;
+}
+
+.reject-modal p {
+  margin-bottom: 1rem;
+  color: var(--gray-700);
+}
+
+.reject-modal .form-textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+/* Rating Modal */
+.rating-section {
+  margin-bottom: 1.5rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+}
+
+.star:hover {
+  background: var(--gray-100);
+  transform: scale(1.1);
+}
+
+.star.active {
+  filter: brightness(1.2);
+}
+
+.star:not(.active) {
+  filter: grayscale(100%) brightness(0.7);
+}
+
+.rating-modal .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.rating-modal .form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.rating-modal .form-textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.rating-modal .form-help {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.checkbox-text {
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Button Variants */
+.btn-success {
+  background: var(--success-600);
+  color: white;
+  border: 1px solid var(--success-600);
+}
+
+.btn-success:hover {
+  background: var(--success-700);
+  border-color: var(--success-700);
+}
+
+.btn-error {
+  background: var(--error-600);
+  color: white;
+  border: 1px solid var(--error-600);
+}
+
+.btn-error:hover {
+  background: var(--error-700);
+  border-color: var(--error-700);
+}
+
+.btn-error.btn-outline {
+  background: transparent;
+  color: var(--error-600);
+  border: 1px solid var(--error-600);
+}
+
+.btn-error.btn-outline:hover {
+  background: var(--error-50);
+  color: var(--error-700);
+}
+
+.btn-warning {
+  background: var(--warning-600);
+  color: white;
+  border: 1px solid var(--warning-600);
+}
+
+.btn-warning:hover {
+  background: var(--warning-700);
+  border-color: var(--warning-700);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .session-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .session-actions .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+
+  .star-rating {
+    justify-content: center;
+  }
+
+  .star {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-actions .btn {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .reject-modal,
+  .rating-modal,
+  .reschedule-modal {
+    padding: 0.5rem 0;
+  }
+
+  .star {
+    font-size: 1.75rem;
+    padding: 0.375rem;
+  }
+}
+
+/* Loading and Disabled States */
+.session-actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.session-actions .btn:disabled:hover {
+  transform: none;
+  background: var(--gray-400);
+}
+
+/* Focus States */
+.star:focus,
+.session-actions .btn:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.checkbox:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* Animation */
+.session-actions .btn {
+  transition: all var(--transition-fast);
+}
+
+.session-actions .btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.star {
+  transition: all var(--transition-fast);
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .btn-success,
+  .btn-error,
+  .btn-warning {
+    border-width: 2px;
+  }
+
+  .btn-error.btn-outline {
+    border-width: 2px;
+  }
+
+  .star:not(.active) {
+    filter: grayscale(100%) brightness(0.5);
+  }
+
+  .star.active {
+    filter: brightness(1.5);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .session-actions .btn,
+  .star {
+    transition: none;
+  }
+
+  .session-actions .btn:hover:not(:disabled),
+  .star:hover {
+    transform: none;
+  }
+}
+
+/* Cancel Modal */
+.cancel-modal {
+  padding: 1.25rem 0;
+}
+
+.warning-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--warning-50);
+  border: 1px solid var(--warning-200);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.warning-icon {
+  font-size: 1.25rem;
+  color: var(--warning-600);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.warning-message h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--warning-800);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.warning-message p {
+  margin: 0;
+  color: var(--warning-700);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.session-info-summary {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.session-info-summary h5 {
+  margin: 0 0 0.75rem 0;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item strong {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+/* Print Styles */
+@media print {
+  .session-actions {
+    display: none;
+  }
+}
